@@ -15,7 +15,7 @@ export function Hero() {
           {siteConfig.availability}
         </p>
         <h1 id="hero-title" className="hero-enter hero-enter-2">
-          Hi, I&apos;m <span>Mark.</span>
+          <span>{siteConfig.name}</span>
         </h1>
         <p className="hero-role hero-enter hero-enter-3">
           {siteConfig.role}
@@ -35,7 +35,7 @@ export function Hero() {
       <div className="hero-meta hero-enter hero-enter-4">
         <div>
           <span className="meta-label">Focus</span>
-          <p>Software · AI · Systems</p>
+          <p>{siteConfig.focus}</p>
         </div>
         <div className="hero-socials">
           <span className="meta-label">Elsewhere</span>
@@ -53,4 +53,3 @@ export function Hero() {
     </section>
   );
 }
-

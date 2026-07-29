@@ -176,17 +176,27 @@ p {
 }
 
 .brand-mark {
-  display: inline-flex;
-  gap: 0.12rem;
+  display: inline-grid;
   align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--foreground-secondary);
   font-family: var(--font-mono);
-  font-size: 0.95rem;
-  font-weight: 650;
-  letter-spacing: -0.04em;
+  font-size: 1.05rem;
+  font-weight: 600;
+  transition:
+    color var(--duration-micro) ease,
+    border-color var(--duration-micro) ease,
+    transform var(--duration-normal) var(--ease-out);
 }
 
-.brand-mark span:last-child {
-  color: var(--primary);
+.brand-mark:hover {
+  color: var(--primary-hover);
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
 }
 
 .primary-nav {
@@ -200,7 +210,8 @@ p {
   padding: 0.5rem 0.64rem;
   color: var(--foreground-secondary);
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.82rem;
+  font-weight: 520;
   letter-spacing: -0.02em;
   transition: color var(--duration-micro) ease;
 }
@@ -233,7 +244,8 @@ p {
   color: var(--foreground);
   background: rgba(0, 155, 149, 0.08);
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
+  font-weight: 620;
   transition:
     border-color var(--duration-micro) ease,
     background var(--duration-micro) ease;
@@ -400,16 +412,17 @@ p {
 }
 
 .hero h1 {
-  max-width: 10ch;
-  font-size: clamp(4rem, 10vw, 9rem);
+  max-width: none;
+  font-size: clamp(4rem, 8vw, 7.5rem);
   font-weight: 520;
   line-height: 0.87;
   letter-spacing: -0.075em;
 }
 
 .hero h1 span {
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(248, 250, 252, 0.7);
+  display: inline-block;
+  color: var(--foreground);
+  white-space: nowrap;
 }
 
 .hero-role {
@@ -446,8 +459,8 @@ p {
   padding: 0.8rem 1.05rem;
   border: 1px solid transparent;
   font-family: var(--font-mono);
-  font-size: 0.76rem;
-  font-weight: 550;
+  font-size: 0.84rem;
+  font-weight: 680;
   letter-spacing: -0.02em;
   transition:
     color var(--duration-micro) ease,
@@ -1266,7 +1279,7 @@ p {
   }
 
   .hero h1 {
-    max-width: 9ch;
+    max-width: none;
   }
 
   .section-heading,
@@ -1331,7 +1344,7 @@ p {
   .primary-nav a {
     padding: 0.9rem 0.85rem;
     border-bottom: 1px solid var(--border);
-    font-size: 0.78rem;
+    font-size: 0.86rem;
   }
 
   .primary-nav a:last-child {
@@ -1360,7 +1373,7 @@ p {
   }
 
   .hero h1 {
-    font-size: clamp(4rem, 16vw, 7rem);
+    font-size: clamp(4rem, 12vw, 6.5rem);
   }
 
   .hero-orbit {
@@ -1465,7 +1478,7 @@ p {
   }
 
   .hero h1 {
-    font-size: clamp(3.75rem, 19vw, 5.5rem);
+    font-size: clamp(3.5rem, 17vw, 5rem);
   }
 
   .hero-statement {

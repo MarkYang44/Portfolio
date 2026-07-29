@@ -43,9 +43,8 @@ export function SiteHeader() {
   return (
     <header className={`site-header${scrolled ? " is-scrolled" : ""}`}>
       <div className="nav-shell">
-        <a className="brand-mark" href="#home" onClick={closeMenu} aria-label="Mark — Home">
-          <span>M</span>
-          <span aria-hidden="true">/</span>
+        <a className="brand-mark" href="#home" onClick={closeMenu} aria-label="Back to top">
+          <span aria-hidden="true">↑</span>
         </a>
         <nav
           className={`primary-nav${open ? " is-open" : ""}`}
@@ -82,4 +81,3 @@ export function SiteHeader() {
     </header>
   );
 }
-

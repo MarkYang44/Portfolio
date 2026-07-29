@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1734,
         height: 907,
-        alt: "Mark — Software Developer",
+        alt: "Mark Yang — Computer Science Student",
       },
     ],
   },
