@@ -56,10 +56,10 @@ npm.cmd ci
 npm.cmd run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:8233](http://localhost:8233).
 
 Copy `.env.example` to `.env.local` when setting up another machine. The
-repository already defaults this value to `http://localhost:3000` for local
+repository already defaults this value to `http://localhost:8233` for local
 development.
 
 ## Quality Checks
