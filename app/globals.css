@@ -45,15 +45,21 @@
 }
 
 html {
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
   scroll-behavior: smooth;
   scroll-padding-top: 7rem;
   background: var(--background);
 }
 
 body {
-  min-width: 320px;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
   margin: 0;
   overflow-x: hidden;
+  overflow-x: clip;
   color: var(--foreground);
   background:
     radial-gradient(circle at 80% 8%, rgba(0, 155, 149, 0.08), transparent 27rem),
@@ -138,6 +144,7 @@ span {
 
 .page-shell {
   width: min(var(--container), calc(100% - 2 * var(--page-pad)));
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -1048,11 +1055,13 @@ span {
 
 .project-footer ul {
   display: flex;
+  min-width: 0;
   flex-wrap: wrap;
   gap: 0.4rem;
 }
 
 .project-footer > span {
+  flex: 0 0 auto;
   color: var(--foreground-muted);
   font-family: var(--font-mono);
   font-size: 0.65rem;
@@ -1195,6 +1204,10 @@ span {
   margin-top: 2.5rem;
 }
 
+.contact-actions > * {
+  min-width: 0;
+}
+
 .contact-more {
   margin-top: 0;
 }
@@ -1231,6 +1244,11 @@ span {
 
 .contact-links a:hover {
   color: var(--primary-hover);
+}
+
+.contact-links a {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .contact-radar {
@@ -1296,7 +1314,7 @@ span {
 
 .footer-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
   align-items: center;
   min-height: 8rem;
@@ -1395,6 +1413,7 @@ span {
 
 .detail-main {
   width: min(var(--container), calc(100% - 2 * var(--page-pad)));
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -1404,6 +1423,7 @@ span {
   min-height: min(78rem, 88vh);
   flex-direction: column;
   justify-content: flex-end;
+  overflow: hidden;
   padding: clamp(10rem, 20vh, 15rem) 0 clamp(5rem, 9vw, 8rem);
   border-bottom: 1px solid var(--border);
 }
@@ -1471,7 +1491,7 @@ span {
 
 .detail-content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   padding: var(--section-space) 0;
   border-bottom: 1px solid var(--border);
 }
@@ -1730,6 +1750,10 @@ span {
     padding-inline: 1.5rem;
   }
 
+  .contact-actions {
+    flex-wrap: wrap;
+  }
+
   .contact-radar {
     top: auto;
     right: -10%;
@@ -1800,6 +1824,10 @@ span {
 
   .hero h1 {
     font-size: clamp(3.5rem, 17vw, 5rem);
+  }
+
+  .hero h1 span {
+    white-space: normal;
   }
 
   .hero-statement {
