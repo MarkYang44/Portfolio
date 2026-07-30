@@ -41,12 +41,26 @@ tests/
 
 Requires Node.js `>=22.13.0`.
 
+macOS, Linux, and Windows Command Prompt:
+
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
+Windows PowerShell users whose execution policy blocks `npm.ps1` can use the
+equivalent executable directly:
+
+```powershell
+npm.cmd ci
+npm.cmd run dev
+```
+
 Open [http://localhost:3000](http://localhost:3000).
+
+Copy `.env.example` to `.env.local` when setting up another machine. The
+repository already defaults this value to `http://localhost:3000` for local
+development.
 
 ## Quality Checks
 
