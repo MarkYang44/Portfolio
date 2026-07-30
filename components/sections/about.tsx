@@ -8,6 +8,7 @@ export function About() {
         index="01"
         eyebrow="About"
         title={siteConfig.aboutTitle}
+        detailHref="/about"
       />
       <div className="about-layout">
         <div className="about-aside" aria-hidden="true">

@@ -11,6 +11,7 @@ export function Projects() {
         eyebrow="Selected Projects"
         title="A selection of systems, tools, and experiments."
         description="Project content is intentionally provisional. The structure is ready for real case studies and detail routes."
+        detailHref="/projects"
       />
       <div className="project-list">
         {featuredProjects.map((project, index) => (

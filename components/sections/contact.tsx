@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { siteConfig, socialLinks } from "@/data/site";
 
 export function Contact() {
@@ -20,6 +21,9 @@ export function Contact() {
         <a className="button button-primary button-large" href={`mailto:${siteConfig.contactEmail}`}>
           Get in touch <span aria-hidden="true">↗</span>
         </a>
+        <Link className="section-more contact-more" href="/contact">
+          Tap For More <span aria-hidden="true">↗</span>
+        </Link>
         <span className="contact-note">{siteConfig.contactNote}</span>
       </div>
       <div className="contact-links">

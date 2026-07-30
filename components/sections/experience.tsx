@@ -9,6 +9,7 @@ export function Experience() {
         eyebrow="Experience"
         title="The path so far."
         description="A flexible timeline for professional experience, education, or other important chapters."
+        detailHref="/experience"
       />
       <div className="timeline">
         {experience.map((item, index) => (

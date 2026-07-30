@@ -9,6 +9,7 @@ export function Skills() {
         eyebrow="Skills / Stack"
         title="Tools are chosen for the problem, not the trend."
         description="A working set of languages, frameworks, and systems. Replace or reorder these entries in one data file."
+        detailHref="/skills"
       />
       <div className="skill-list">
         {skillGroups.map((group, index) => (
